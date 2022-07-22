@@ -27,11 +27,7 @@ const useContacts = () => {
 };
 
 const ContactList = () => {
-  // const { data, isLoading, error } = useGetContactsQuery();
   const { data, filteredContacts, error, isLoading } = useContacts();
-
-  // console.log(contacts);
-  // console.log(data);
 
   if (isLoading) return <p>Loading...</p>;
 
