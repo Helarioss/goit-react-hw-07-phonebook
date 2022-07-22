@@ -41,10 +41,9 @@ const ContactForm = () => {
 
       const result = await addContact({ name, phone });
 
-      if (result.error)
-        throw new Error('Не удалось добавить контакт в базу данных');
+      if (result.error) throw new Error('Failed to add contact to database');
 
-      Notify.success('Контакт успешно добавлен');
+      Notify.success('Contact added successfully');
       setName('');
       setPhone('');
     } catch (error) {

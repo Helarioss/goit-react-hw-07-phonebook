@@ -1,0 +1,7 @@
+import styled from 'styled-components';
+
+export const Input = styled.input`
+  margin-top: 10px;
+  display: block;
+  margin-bottom: 10px;
+`;
