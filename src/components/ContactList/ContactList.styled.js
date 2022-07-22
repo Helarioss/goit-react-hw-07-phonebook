@@ -1,5 +1,5 @@
 import styled from 'styled-components';
 
-export const ContactList = styled.ul`
+export const ContactListStyled = styled.ul`
   width: 100%;
 `;

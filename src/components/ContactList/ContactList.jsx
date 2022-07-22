@@ -1,9 +1,11 @@
 import { createSelector } from '@reduxjs/toolkit';
-import ContactItem from 'components/ContactItem';
 import { useMemo } from 'react';
 import { useSelector } from 'react-redux';
 import { useGetContactsQuery } from 'redux/contactsApi';
 import { getFilter } from 'redux/filterSlice';
+
+import { ContactListStyled } from './ContactList.styled';
+import ContactItem from 'components/ContactItem';
 
 const useContacts = () => {
   const filter = useSelector(getFilter);
@@ -36,11 +38,11 @@ const ContactList = () => {
   if (data?.length === 0) return <p>No contacts</p>;
 
   return (
-    <ContactList>
+    <ContactListStyled>
       {filteredContacts?.map(contact => (
         <ContactItem key={contact.id} {...contact} />
       ))}
-    </ContactList>
+    </ContactListStyled>
   );
 };
 
