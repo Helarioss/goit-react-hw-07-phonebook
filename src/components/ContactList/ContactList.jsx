@@ -40,11 +40,11 @@ const ContactList = () => {
   if (data?.length === 0) return <p>No contacts</p>;
 
   return (
-    <ul>
+    <ContactList>
       {filteredContacts?.map(contact => (
         <ContactItem key={contact.id} {...contact} />
       ))}
-    </ul>
+    </ContactList>
   );
 };
 
